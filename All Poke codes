@@ -1,0 +1,270 @@
+--Code to see who has the most Total points in the three common types.
+select *
+from `Pokemon_SQL.500 Pokemon`
+WHERE Type_1 = 'Fire' OR Type_1 = 'Water' OR Type_1 = 'Grass'
+ORDER BY Total DESC
+Limit 10
+
+-- # of pokedex pokemon (553)
+SELECT COUNT(_)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+
+--See most Total points in the three common types NO Legendary  
+select *
+from `Pokemon_SQL.500 Pokemon`
+WHERE Type_1 = 'Fire' AND Type_1 = 'Water' AND Type_1 = 'Grass' OR Legendary IN(FALSE)
+ORDER BY Total DESC
+
+--Code to see who what defense pokemon(legendary) has the most Defense 
+select *
+from `Pokemon_SQL.500 Pokemon`
+WHERE Legendary IN (TRUE)
+ORDER BY Defense DESC
+Limit 5
+
+--Code to see who what defense pokemon(legendary) has the most Attack
+select *
+from `Pokemon_SQL.500 Pokemon`
+WHERE Legendary IN (TRUE)
+ORDER BY Attack DESC
+Limit 5
+
+--Code to see who what defense pokemon(legendary) has the most total 
+select *
+from `Pokemon_SQL.500 Pokemon`
+WHERE Legendary IN (TRUE)
+ORDER BY Total DESC
+Limit 10
+
+--Code to see total non-legendary
+ select *
+from `Pokemon_SQL.500 Pokemon`
+WHERE Legendary IN (FALSE)
+ORDER BY Total DESC
+Limit 10
+
+--Code to see what poekmon has the most total points 
+SELECT *
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+Order by Total DESC
+LIMIT 5
+
+--Code to see pokemon with the least total points.
+SELECT *
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+Order by Total
+LIMIT 5
+
+--code to see pokemon with the most HP
+SELECT *
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+Order by HP DESC
+LIMIT 5
+
+--code to see most Speed 
+SELECT *
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+Order by Speed DESC
+LIMIT 5
+
+--Weakest total is mostly bugs!!
+select *
+from `Pokemon_SQL.500 Pokemon`
+WHERE Total < 200
+ORDER BY Total
+Limit 10
+
+--Weak legendary by total
+select *
+from `Pokemon_SQL.500 Pokemon`
+Where Legendary IN(TRUE) AND Total >= 580
+ORDER BY Total
+limit 10
+
+-----------# of types----
+--fire type (35)
+SELECT COUNT(Type_1)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+ where Type_1 = "Fire"
+
+--# water types (89)
+SELECT COUNT(Type_1)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+ where Type_1 = "Water"
+
+--# grass types (50)
+SELECT COUNT(Type_1)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+ where Type_1 = "Grass"
+
+-- bug types (48)
+SELECT COUNT(Type_1)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+ where Type_1 = "Bug"
+
+--# Ground types (22)
+SELECT COUNT(Type_1)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+ where Type_1 = "Ground"
+
+--# Rock types (29)
+SELECT COUNT(Type_1)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+ where Type_1 = "Rock"
+
+--# electric types (33)
+SELECT COUNT(Type_1)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_1 = 'Electric'
+
+--# Dragon types (19)
+SELECT COUNT(Type_1)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_1 = 'Dragon'
+
+--# Normal types (75)
+SELECT COUNT(Type_1)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_1 = 'Normal'
+
+--# Ice types (16)
+SELECT COUNT(Type_1)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_1 = 'Ice'
+
+--# Poison types (24)
+SELECT COUNT(Type_1)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_1 = 'Poison'
+
+--# Flying types (0)
+SELECT COUNT(Type_1)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_1 = 'Flying'
+
+--# Psychic types (38)
+SELECT COUNT(Type_1)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_1 = 'Psychic'
+
+--# Ghost types (17)
+SELECT COUNT(Type_1)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_1 = 'Ghost'
+
+--# Dark types (15)
+SELECT COUNT(Type_1)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_1 = 'Dark'
+
+--# Steel types (18)
+SELECT COUNT(Type_1)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_1 = 'Steel'
+
+--# Fairy types (8)
+SELECT COUNT(Type_1)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_1 = 'Fairy'
+
+-- type_2---
+
+--# Normal types_2 (0)
+SELECT COUNT(Type_2)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_2 = 'Normal'
+
+--# Flying types_2 (72)
+SELECT COUNT(Type_2)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_2 = 'Flying'
+
+--# Fire types_2 (5)
+SELECT COUNT(Type_2)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_2 = 'Fire'
+
+--# Water types_2 (10)
+SELECT COUNT(Type_2)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_2 = 'Water'
+
+--# Electric types_2 (2)
+SELECT COUNT(Type_2)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_2 = 'Electric'
+
+--# Grass types_2 (10)
+SELECT COUNT(Type_2)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_2 = 'Grass'
+
+--# Ice types_2 (9)
+SELECT COUNT(Type_2)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_2 = 'Ice'
+
+--# Fighting types_2 (15)
+SELECT COUNT(Type_2)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_2 = 'Fighting'
+
+--# Poison types_2 (29)
+SELECT COUNT(Type_2)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_2 = 'Poison'
+
+--# Ground types_2 (31)
+SELECT COUNT(Type_2)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_2 = 'Ground'
+
+--# Psychic types_2 (28)
+SELECT COUNT(Type_2)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_2 = 'Psychic'
+
+--# Bug types_2 (3)
+SELECT COUNT(Type_2)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_2 = 'Bug'
+
+--# Rock types_2 (10)
+SELECT COUNT(Type_2)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_2 = 'Rock'
+
+----# Ghost types_2 (5)
+SELECT COUNT(Type_2)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_2 = 'Ghost'
+
+--# Dragon types_2 (10)
+SELECT COUNT(Type_2)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_2 = 'Dragon'
+
+--# Dark types_2 (14)
+SELECT COUNT(Type_2)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_2 = 'Dark'
+
+--# Steel types_2 (14)
+SELECT COUNT(Type_2)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_2 = 'Steel'
+
+--# Fairy types_2 (15)
+SELECT COUNT(Type_2)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_2 = 'Fairy'
+
+--# of both grass and posion (13)
+SELECT COUNT(Type_2)
+ FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+where type_1 = 'Grass' And type_2 = 'Poison'
+
+-- # of type_2 is not Null(282), subtract 553-282=271
+SELECT COUNT (Type_2)
+FROM `first-bit-387717.Pokemon_SQL.500 Pokemon`
+WHERE Type_2 IS NOT NULL
